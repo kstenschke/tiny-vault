@@ -25,14 +25,9 @@ request.
 
 ### Run and set secret
 
-Run **tvault** on default port 1234: ```tvault```  
+Run on default port 1234: ```tvault```  
 
-Run **tvault** on port 6789: ```tvault 6789```
-
-At startup tvault opens a GTK popup window with an input prompt,
-asking you to enter the secret.  
-
-To replace the secret by a different string, stop and restart Tiny Vault. 
+Run on port 6789: ```tvault 6789```
 
 
 ### Retrieve secret
@@ -48,10 +43,10 @@ Retrieve current secret using CURL: ```curl http://localhost:1234```
 # retrieve secret and store into shell variable
 MY_SECRET=$(curl http://localhost:1234)
 
-# type secret string
-...
+# type secret string using xdotool
+xdotool type $MY_SECRET
 # hit enter
-...
+xdotool key KP_Enter
 
 # unset variable that held the secret
 unset MY_SECRET
