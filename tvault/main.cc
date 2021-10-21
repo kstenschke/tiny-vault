@@ -55,7 +55,7 @@ static gboolean OnKeyDown(GtkWidget *window, GdkEventKey *event, gpointer data)
   }
 }
 
-static gboolean OnKeyUp(GtkWidget *okButton,
+static gboolean OnKeyUp(GtkWidget *window,
                         GdkEventKey *event,
                         gpointer data) {
   auto dataStruct = static_cast<appUserData *>(data);
