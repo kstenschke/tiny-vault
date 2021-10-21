@@ -21,14 +21,13 @@ Temporary local password store for Linux.
 
 ## What does it do?
 
-When starting **Tiny Vault**, the user enters a secret string, which is than
-stored temporarily for the runtime of Tiny Vault in the RAM (and never onto the
-file system).  
+When starting **Tiny Vault**, the user is asked to enter a secret string, 
+which is than temporarily (for the runtime of Tiny Vault) stored in the RAM 
+(and never onto the file system).  
 
 ![Screenshot](/assets/screenshot.png) 
 
-While running, **Tiny Vault** allows to retrieve the secret locally via HTTP 
-request.  
+**Tiny Vault** than allows to retrieve the secret locally via HTTP request.  
 
 
 ## Usage
