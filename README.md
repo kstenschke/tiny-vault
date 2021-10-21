@@ -2,9 +2,12 @@ Tiny Vault
 ==========
 
 ## What does it do?
-**Tiny Vault** keeps a secret string (e.g. a password), typed-in once at start-up time,
-in memory **w/o ever storing the secret on the file system** 
-and allows to retrieve it again via HTTP.
+When starting **Tiny Vault**, the user once enters the secret string, which is than stored temporarily
+for the runtime of Tiny Vault in the RAM (and never onto the file system).  
+
+![Screenshot](/assets/screenshot.png) 
+
+While running, **Tiny Vault** allows to retrieve the secret locally via HTTP request.  
 
 
 ## Table of Contents
@@ -26,8 +29,6 @@ Run **tvault** on port 6789: ```tvault 6789```
 
 At startup tvault opens a GTK popup window with an input prompt,
 asking you to enter the secret.  
-
-![Screenshot](/assets/screenshot.png) 
 
 To replace the secret by a different string, stop and restart Tiny Vault. 
 
