@@ -2,7 +2,7 @@ Tiny Vault
 ==========
 
 ## What does it do?
-When starting **Tiny Vault**, the user once enters the secret string, which is than stored temporarily
+When starting **Tiny Vault**, the user enters a secret string, which is than stored temporarily
 for the runtime of Tiny Vault in the RAM (and never onto the file system).  
 
 ![Screenshot](/assets/screenshot.png) 
