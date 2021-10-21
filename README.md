@@ -1,7 +1,11 @@
 Tiny Vault
 ==========
 
+Temporary local password store for Linux.  
+
+
 ## What does it do?
+
 When starting **Tiny Vault**, the user enters a secret string, which is than
 stored temporarily for the runtime of Tiny Vault in the RAM (and never onto the
 file system).  
@@ -13,6 +17,7 @@ request.
 
 
 ## Table of Contents
+
 * [What does it do?](#what-does-it-do)
 * [Usage](#usage)
   + [Run and set secret](#run-and-set-secret)
