@@ -27,6 +27,8 @@ Run **tvault** on port 6789: ```tilv 6789```
 At startup tvault opens a GTK popup window with an input prompt,
 asking you to enter the secret.  
 
+![Screenshot](/assets/screenshot.png) 
+
 To replace the secret by a different string, stop and restart tvault. 
 
 

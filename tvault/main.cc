@@ -67,23 +67,13 @@ static gboolean OnKeyUp(GtkWidget *okButton,
   return TRUE;
 }
 
-static gboolean OnClickOk(GtkWidget *button_ok,
-                          GdkEventKey *event,
-                          gpointer data) {
-  auto dataStruct = static_cast<appUserData *>(data);
-  GtkWidget *window = dataStruct->window;
-  gtk_widget_destroy(window);
-
-  return TRUE;
-}
-
 static void Activate(GtkApplication* app, gpointer user_data) {
   d = static_cast<appUserData *>(user_data);
 
   // Setup window
   GtkWidget *window = gtk_application_window_new(app);
-  gtk_window_set_title(GTK_WINDOW(window), "Enter Secret - tvault");
-  gtk_window_set_default_size(GTK_WINDOW(window), 360, 100);
+  gtk_window_set_title(GTK_WINDOW(window), "tiny vault");
+  gtk_window_set_default_size(GTK_WINDOW(window), 360, 70);
   gtk_window_set_resizable(GTK_WINDOW(window), FALSE);
   gtk_window_set_keep_above(GTK_WINDOW(window), TRUE);
 
@@ -106,24 +96,11 @@ static void Activate(GtkApplication* app, gpointer user_data) {
   gtk_entry_set_visibility(GTK_ENTRY(password), 0);
   gtk_container_add(GTK_CONTAINER(box_password), password);
 
-  // Add box to contain ok button
-  GtkWidget *box_buttons = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 0);
-  gtk_widget_set_halign(box_buttons, GTK_ALIGN_END);
-  gtk_container_add(GTK_CONTAINER(box_outer), box_buttons);
-  // Add ok button
-  GtkWidget *button_ok = gtk_button_new_with_label ("Ok");
-  gtk_container_add(GTK_CONTAINER(box_buttons), button_ok);
-  // Connect button signal handler
-  g_signal_connect(button_ok, "clicked", G_CALLBACK(OnClickOk), d);
-
   // Connect window signal handlers
   g_signal_connect(window, "key_press_event", G_CALLBACK(OnKeyDown), d);
   g_signal_connect(window, "key_release_event", G_CALLBACK(OnKeyUp), d);
 
-//  g_signal_connect(window, "destroy", G_CALLBACK(gtk_main_quit), NULL);
-
   // Make elements accessible in app
-//  d->window = window;
   d->entry_password = password;
 
   gtk_widget_show_all(window);
