@@ -132,7 +132,7 @@ int main(int argc, char **argv) {
     // no password given. exit
     status = 0;
   } else {
-    g_print("tvault can now be reached at: http://localhost:1234");
+    g_print("tvault can now be reached at: http://localhost:%d", kPort);
 
     // Setup server route
     std::string password = d->password;
