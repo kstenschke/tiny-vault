@@ -1,6 +1,11 @@
 Tiny Vault
 ==========
 
+[![Platform](https://img.shields.io/badge/platform-linux-blue)](#)
+[![License](https://img.shields.io/badge/License-GPL3)](https://github.com/kstenschke/tiny-vault/blob/master/LICENSE)
+[![Written in C++](https://img.shields.io/badge/written%20in-C++-blue)](#)  
+
+
 Temporary local password store for Linux.  
 
 
