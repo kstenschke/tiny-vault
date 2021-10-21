@@ -2,9 +2,9 @@ tvault - Tiny Vault
 ===================
 
 ## What does it do?
-**tvault** is a local HTTP server that temporarily stores a secret string 
-(e.g. a password) in memory and allows to retrieve it again when requested via 
-HTTP. tvault does NOT store the secret string on the file system.
+**tvault** keeps a secret string (e.g. a password), typed-in once at start-up time,
+in memory **w/o ever storing the secret on the file system** 
+and allows to retrieve it again via HTTP.
 
 
 ## Table of Contents
