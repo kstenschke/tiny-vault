@@ -4,6 +4,16 @@ Tiny Vault
 Temporary local password store for Linux.  
 
 
+## Table of Contents
+
+* [What does it do?](#what-does-it-do)
+* [Usage](#usage)
+  + [Run and set secret](#run-and-set-secret)
+  + [Retrieve secret](#retrieve-secret)
+  + [Example usage script](#example-usage-script)
+* [Author and License](#author-and-license)
+
+
 ## What does it do?
 
 When starting **Tiny Vault**, the user enters a secret string, which is than
@@ -14,16 +24,6 @@ file system).
 
 While running, **Tiny Vault** allows to retrieve the secret locally via HTTP 
 request.  
-
-
-## Table of Contents
-
-* [What does it do?](#what-does-it-do)
-* [Usage](#usage)
-  + [Run and set secret](#run-and-set-secret)
-  + [Retrieve secret](#retrieve-secret)
-  + [Example usage script](#example-usage-script)
-* [Author and License](#author-and-license)
 
 
 ## Usage
