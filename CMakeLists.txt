@@ -60,3 +60,7 @@ add_executable(tvault tvault/main.cc)
 
 # Link the target to the GTK+ libraries
 TARGET_LINK_LIBRARIES(tvault ${GTK3_LIBRARIES})
+
+install(TARGETS
+        ${PROJECT_NAME}
+        RUNTIME DESTINATION /usr/bin/)
