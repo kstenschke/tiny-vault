@@ -85,11 +85,13 @@ static void Activate(GtkApplication* app, gpointer user_data) {
   // Add box to contain label and input field
   GtkWidget *box_password = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 8);
   gtk_container_add(GTK_CONTAINER(box_outer), box_password);
+
   // Add label
   GtkWidget *label = gtk_label_new("Secret:");
   g_object_set (label, "margin-right", 8, NULL);
   gtk_box_pack_start(GTK_BOX(box_password), label, FALSE, FALSE, 0);
   gtk_box_pack_start(GTK_BOX(box_password), label, TRUE, TRUE, 0);
+
   // Add input field
   GtkWidget *password = gtk_entry_new();
   gtk_widget_set_hexpand(password, true);
